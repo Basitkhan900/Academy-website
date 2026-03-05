@@ -8,8 +8,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white/30 backdrop-blur-[6.3px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] fixed top-0 left-0 w-full z-50
-    rounded-xl border border-white/20 text-black m-6 md:m-6">
+    <div className="fixed z-50 w-full top-0 ">
+    <div className="bg-white/30 backdrop-blur-[6.3px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] p-2
+    rounded-xl border border-white/20 text-black  md:m-6">
 
       <div className="flex items-center justify-between px-4 md:px-8 py-4">
 
@@ -18,10 +19,10 @@ const Navbar = () => {
           <img
             src={logo}
             alt="logo"
-            className="w-24 md:w-32 h-10 md:h-12 cursor-pointer"
+            className="w-18 md:w-18 h-6 md:h-10 cursor-pointer"
           />
 
-          <div className="hidden sm:block">
+          <div className=" sm:block">
             <h1 className="font-bold text-xl md:text-3xl transition duration-300 hover:scale-105">
               Tech Pioneers
             </h1>
@@ -55,7 +56,7 @@ const Navbar = () => {
 
        
         <div className="hidden lg:block ">
-          <Button title={"Contact Us"} className="w-28 md:w-32 h-10 md:h-12" />
+          <Button title={"Contact Us"} className="w-28 md:w-38 h-8 md:h-12" />
         </div>
 
         
@@ -81,6 +82,7 @@ const Navbar = () => {
           <Button title={"Contact Us"} className="w-full h-10 mt-2 mr-4" />
         </div>
       )}
+    </div>
     </div>
   );
 };

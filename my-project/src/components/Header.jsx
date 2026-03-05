@@ -34,7 +34,7 @@ const Header = () => {
         </h2>
 
         <div className="mt-6">
-          <Button title={"Get Started"} className="w-32 sm:w-36 h-12 sm:h-14" />
+          <Button title={"Get Started"} className="w-28 md:w-38 h-14 md:h-14" />
         </div>
 
       </div>
