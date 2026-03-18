@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Teamdesign = ({ member }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div 
+    <div
       className="group perspective-1000 w-full h-[450px] px-4 cursor-pointer"
       onClick={() => setIsFlipped(!isFlipped)} // Allows flip on tap (mobile)
     >
       {/* Flip Container */}
-      <div className={`relative w-full h-full transition-transform duration-700 transform-style-3d 
-        ${isFlipped ? 'rotate-y-180' : ''} 
+      <div
+        className={`relative w-full h-full transition-transform duration-700 transform-style-3d 
+        ${isFlipped ? "rotate-y-180" : ""} 
         group-hover:rotate-y-180`}
       >
-        
         {/* FRONT SIDE */}
         <div className="absolute inset-0 backface-hidden bg-white rounded-[28px] shadow-[0_10px_40px_rgba(0,0,0,0.06)] px-6 py-10 flex flex-col items-center text-center border border-gray-50">
           <div className="w-40 h-40 md:w-44 md:h-44 rounded-full overflow-hidden mb-8 shadow-md border-4 border-white">
-            <img 
-              src={member.image} 
-              alt={member.title} 
+            <img
+              src={member.image}
+              alt={member.title}
               className="w-full h-full object-cover"
             />
           </div>
@@ -31,7 +31,11 @@ const Teamdesign = ({ member }) => {
           </p>
           <div className="text-[#64748b] text-[13px] leading-relaxed px-2">
             {Array.isArray(member.disc) ? (
-              member.disc.map((line, index) => <p key={index} className="mb-1">{line}</p>)
+              member.disc.map((line, index) => (
+                <p key={index} className="mb-1">
+                  {line}
+                </p>
+              ))
             ) : (
               <p>{member.disc}</p>
             )}
@@ -47,7 +51,6 @@ const Teamdesign = ({ member }) => {
             View Details
           </button>
         </div>
-
       </div>
     </div>
   );

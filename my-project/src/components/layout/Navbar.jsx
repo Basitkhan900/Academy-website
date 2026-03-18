@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/tect logo.png";
-import Button from "./Button";
+import logo from "../../assets/images/tect logo.png";
+import Button from "../Button";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const Navbar = () => {
